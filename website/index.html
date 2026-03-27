@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>(っ◔◡◔)っ ♥ gradient protocol ♥</title>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        canvas { display: block; }
+    </style>
 </head>
 <body>
-    <h1>hello1111</h1>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5.party@latest/dist/p5.party.js"></script>
+    <script src="sketch.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <div class="gradient-protocol">gradient protocol</div>
+    <div id="brush-selector" class="brush-selector">
+        <div class="brush-option" data-type="1"><div class="preview"></div></div>
+        <div class="brush-option" data-type="2"><div class="preview"></div></div>
+        <div class="brush-option" data-type="3"><div class="preview"></div></div>
+        <div class="brush-option" data-type="4"><div class="preview"></div></div>
+        <div class="brush-option" data-type="5"><div class="preview"></div></div>
+        <div class="brush-option" data-type="rainbow"><div class="preview"></div></div>
+        <div class="brush-option" data-type="spraypaint"><div class="preview"></div></div>
+        <div class="brush-option eraser" data-type="eraser"><div class="preview"></div></div>
+        <div class="brush-option clear-all" data-type="clear-all"><div class="preview"></div></div>
+    </div>
+    <div class="controls" style="padding-right: 20px;">
+        <label>size</label>
+        <input type="range" id="brush-size" min="1" max="50" value="10">
+        <label>opacity</label>
+        <input type="range" id="brush-opacity" min="0" max="255" value="150">
+        <label id="admin">˖𓍢ִ໋🌷͙֒✧˚</label>
+    </div>
 </body>
 </html>
