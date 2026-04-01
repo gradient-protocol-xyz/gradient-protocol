@@ -1,9 +1,8 @@
-// require https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js
-// require https://cdn.jsdelivr.net/npm/p5.party@latest/dist/p5.party.js
-
 let shared;
 let bgLayer;
 let currentBrush = '1';
+
+console.log('hello from inside sketch js!');
 
 function preload() {
   partyConnect("wss://demoserver.p5party.org", "gradient_protocol_canvas", "gradient_protocol_canvas_111111111111" );

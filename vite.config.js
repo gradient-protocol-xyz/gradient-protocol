@@ -1,9 +1,9 @@
 import { transformWithEsbuild } from 'vite'
 
-
 export default {
-    root: 'website/',
-    publicDir: '../public/',
+    root: './',
+    input: ['./index.html', './sketch.js'],
+    publicDir: './public/',
     plugins:
     [
 
@@ -11,7 +11,7 @@ export default {
             name: 'load+transform-js-files-as-jsx',
             async transform(code, id)
             {
-                if (!id.match(/src\/.*\.js$/))
+                if (!id.match(/website\/.*\.js$/))
                     return null
 
                 return transformWithEsbuild(code, id, {
@@ -28,7 +28,9 @@ export default {
     },
     build:
     {
-        outDir: '../dist', // Output in the dist/ folder
+        minify: false,
+        manifest: true,
+        outDir: './dist', // Output in the dist/ folder
         emptyOutDir: true, // Empty the folder first
         sourcemap: true // Add sourcemap
     },
