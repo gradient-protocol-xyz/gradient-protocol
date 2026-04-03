@@ -2,8 +2,6 @@ let shared;
 let bgLayer;
 let currentBrush = '1';
 
-console.log('hello from inside sketch js!');
-
 function preload() {
   partyConnect("wss://demoserver.p5party.org", "gradient_protocol_canvas", "gradient_protocol_canvas_111111111111" );
   shared = partyLoadShared("shared", { strokes: [] });
@@ -18,7 +16,6 @@ function setup() {
   });
 
   createCanvas(windowWidth, windowHeight);
-  noCursor();
   createBackground();
 
   document.querySelectorAll('.brush-option').forEach(option => {
