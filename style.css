@@ -69,6 +69,19 @@ canvas {
   pointer-events: auto;
 }
 
+.admin {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  color: white;
+  font-family: 'Surgena', sans-serif;
+  font-size: 12px;
+  pointer-events: auto;
+}
+
 .brush-option {
   width: 40px;
   height: 40px;
