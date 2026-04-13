@@ -8,11 +8,10 @@ function preload() {
 }
 
 function setup() {
-  // for emergency canvas clearing
-  document.getElementById('admin').addEventListener('click', (e) => {
-    console.log('˖𓍢ִ໋🌷͙֒✧˚ clearing canvas!')
-      shared.strokes = [];
-      return;
+  // for canvas saving
+  document.getElementById('save').addEventListener('click', (e) => {
+    console.log('˖𓍢ִ໋ 💾 ✧˚ save!')
+      saveGif('animation.gif', 5, { delay: 1 })
   });
 
   createCanvas(windowWidth, windowHeight);
